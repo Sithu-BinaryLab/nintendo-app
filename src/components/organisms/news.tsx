@@ -112,6 +112,7 @@ const News = () => {
           })}
         </div>
         <Button
+          onClick={() => router.push("/whatsnew/1")}
           size="lg"
           className="cursor-pointer !h-12 !text-lg transition-transform duration-200 hover:scale-105 mt-10"
         >

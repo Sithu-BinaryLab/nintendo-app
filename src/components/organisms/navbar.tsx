@@ -53,7 +53,7 @@ const Navbar = () => {
             Nintendo
           </p>
         </Link>
-        <div className="px-4 flex items-center gap-4">
+        <div className="px-4 hidden lg:flex items-center gap-4">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -88,33 +88,35 @@ const Navbar = () => {
         </div>
       </div>
       <div className="basis-1/2 flex items-center justify-end gap-4 px-6">
-        <SearchSheet />
-        <Link
-          href={
-            "https://accounts.nintendo.com/authorize_guide?redirect_uri=https%3A%2F%2Faccounts.nintendo.com%2Fconnect%2F1.0.0%2Fauthorize%3Fresponse_type%3Dcode%2Bid_token%26client_id%3D01fe027acd6bc0cf%26redirect_uri%3Dhttps%253A%252F%252Fwww.nintendo.com%26scope%3DeshopDemo%2BeshopDevice%2BeshopPrice%2BfamilyMember%2Bmission%253AanyClients%2BmissionStatus%253AanyClients%2BmissionStatus%253Aprogress%2Bopenid%2BparentalControlSetting%2BpointTransaction%2BpointWallet%2Buser%2Buser.birthday%2Buser.email%2Buser.membership%2Buser.mii%2Buser.wishlist%26state%3D6e98ced961a095ed67f5dcc3126e8aa4%26response_mode%3Dweb_message%26web_message_uri%3Dhttps%253A%252F%252Faccounts.nintendo.com%26web_message_target%3Dop-frame%26prompt%3Dconsent%26interacted%3D1&type=mixed"
-          }
-          target="_blank"
-          className="bg-bgContainer px-3 py-2 rounded-full flex items-center justfy-center group"
-        >
-          <GoHeartFill
-            size={18}
-            className="text-textColor group-hover:text-primary"
-          />
-        </Link>
-        <Link
-          href={
-            "https://accounts.nintendo.com/authorize_guide?redirect_uri=https%3A%2F%2Faccounts.nintendo.com%2Fconnect%2F1.0.0%2Fauthorize%3Fresponse_type%3Dcode%2Bid_token%26client_id%3D01fe027acd6bc0cf%26redirect_uri%3Dhttps%253A%252F%252Fwww.nintendo.com%26scope%3DeshopDemo%2BeshopDevice%2BeshopPrice%2BfamilyMember%2Bmission%253AanyClients%2BmissionStatus%253AanyClients%2BmissionStatus%253Aprogress%2Bopenid%2BparentalControlSetting%2BpointTransaction%2BpointWallet%2Buser%2Buser.birthday%2Buser.email%2Buser.membership%2Buser.mii%2Buser.wishlist%26state%3D6e98ced961a095ed67f5dcc3126e8aa4%26response_mode%3Dweb_message%26web_message_uri%3Dhttps%253A%252F%252Faccounts.nintendo.com%26web_message_target%3Dop-frame%26prompt%3Dconsent%26interacted%3D1&type=mixed"
-          }
-          target="_blank"
-          className="bg-bgContainer px-3 py-2 rounded-full flex items-center justfy-center group"
-        >
-          <FaCartShopping
-            size={18}
-            className="text-textColor group-hover:text-primary"
-          />
-        </Link>
+        <div className="hidden lg:flex items-center justify-end gap-4">
+          <SearchSheet />
+          <Link
+            href={
+              "https://accounts.nintendo.com/authorize_guide?redirect_uri=https%3A%2F%2Faccounts.nintendo.com%2Fconnect%2F1.0.0%2Fauthorize%3Fresponse_type%3Dcode%2Bid_token%26client_id%3D01fe027acd6bc0cf%26redirect_uri%3Dhttps%253A%252F%252Fwww.nintendo.com%26scope%3DeshopDemo%2BeshopDevice%2BeshopPrice%2BfamilyMember%2Bmission%253AanyClients%2BmissionStatus%253AanyClients%2BmissionStatus%253Aprogress%2Bopenid%2BparentalControlSetting%2BpointTransaction%2BpointWallet%2Buser%2Buser.birthday%2Buser.email%2Buser.membership%2Buser.mii%2Buser.wishlist%26state%3D6e98ced961a095ed67f5dcc3126e8aa4%26response_mode%3Dweb_message%26web_message_uri%3Dhttps%253A%252F%252Faccounts.nintendo.com%26web_message_target%3Dop-frame%26prompt%3Dconsent%26interacted%3D1&type=mixed"
+            }
+            target="_blank"
+            className="bg-bgContainer px-3 py-2 rounded-full flex items-center justfy-center group"
+          >
+            <GoHeartFill
+              size={18}
+              className="text-textColor group-hover:text-primary"
+            />
+          </Link>
+          <Link
+            href={
+              "https://accounts.nintendo.com/authorize_guide?redirect_uri=https%3A%2F%2Faccounts.nintendo.com%2Fconnect%2F1.0.0%2Fauthorize%3Fresponse_type%3Dcode%2Bid_token%26client_id%3D01fe027acd6bc0cf%26redirect_uri%3Dhttps%253A%252F%252Fwww.nintendo.com%26scope%3DeshopDemo%2BeshopDevice%2BeshopPrice%2BfamilyMember%2Bmission%253AanyClients%2BmissionStatus%253AanyClients%2BmissionStatus%253Aprogress%2Bopenid%2BparentalControlSetting%2BpointTransaction%2BpointWallet%2Buser%2Buser.birthday%2Buser.email%2Buser.membership%2Buser.mii%2Buser.wishlist%26state%3D6e98ced961a095ed67f5dcc3126e8aa4%26response_mode%3Dweb_message%26web_message_uri%3Dhttps%253A%252F%252Faccounts.nintendo.com%26web_message_target%3Dop-frame%26prompt%3Dconsent%26interacted%3D1&type=mixed"
+            }
+            target="_blank"
+            className="bg-bgContainer px-3 py-2 rounded-full flex items-center justfy-center group"
+          >
+            <FaCartShopping
+              size={18}
+              className="text-textColor group-hover:text-primary"
+            />
+          </Link>
 
-        <LoginSheet />
+          <LoginSheet />
+        </div>
         <Link
           target="_blank"
           href={"https://www.nintendo.com/region-selector/"}

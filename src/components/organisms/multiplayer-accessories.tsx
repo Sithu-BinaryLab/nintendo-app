@@ -9,35 +9,34 @@ import {
 import Image from "next/image";
 import { Badge } from "../atoms/badge";
 import { AtomIcon, HeartIcon } from "lucide-react";
-
-const StoreNewRelease = () => {
+const MultiplayerAccessories = () => {
   const data = [
     {
       id: 1,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/9283ed4325ac4ac5be6648f0945efb6d_1024",
-      gif: "https://media.tenor.com/bWL6DG8SSvYAAAAM/malos-monday.gif",
-      title: "Xenoblade Chronicles",
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/ar_1.0,c_auto_pad,g_auto:thirds_0/f_auto/q_auto/dpr_1.5/c_scale,w_300/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Controllers/rematch-wireless-controller-glow-super-mario-star-120766/120766-pdp-nintendo-switch-rematch-wireless-controller-glow-star-front-1200x675",
+      gif: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSCrt6Ppv4yY_kIkUpR_eKo_h76gPCwNJkIA&s",
+      title: "REMATCH Wireless Controller Glow: Super Mario™ Star",
       price: "$59.99",
     },
     {
       id: 2,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/60f29fafdcfe4b42ac2b74dd930fd620_1024",
-      gif: "https://media.tenor.com/PxwLHiupI2oAAAAM/super-smash-bros-brawl-super-smash-bros.gif",
-      title: "Donkey Kong",
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/ar_1.0,c_auto_pad,g_auto:thirds_0/f_auto/q_auto/dpr_1.5/c_scale,w_300/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Cases/nintendo-switch-travel-case-glow-super-star-120767/120767-pdp-nintendo-switch-travel-case-super-mario-star-front-1200x675",
+      gif: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_500/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Cases/nintendo-switch-travel-case-glow-super-star-120767/120767-pdp-nintendo-switch-travel-case-super-mario-star-top-angle-glow-1200x675",
+      title: "Nintendo Switch™ Travel Case Glow - Super Star",
       price: "$29.99",
     },
     {
       id: 3,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/38a6ead82da44173a9e1e9aaab3b467b_1024",
-      gif: "https://media.tenor.com/uSRRixIs3scAAAAM/boxing-sheamus.gif",
-      title: "Fitness Boxing",
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/ar_1.0,c_auto_pad,g_auto:thirds_0/f_auto/q_auto/dpr_1.5/c_scale,w_300/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Controllers/rematch-wireless-controller-glow-super-mario-icon-120765/120765-pdp-nintendo-switch-rematch-wireless-controller-red-checkered-gid-front-1200x675",
+      gif: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlJmN9QbzwLQcnAOZX0HpiDdPuO6x4qUP3zw&s",
+      title: "REMATCH Wireless Controller Glow: Super Mario™ Icon",
       price: "$59.99",
     },
     {
       id: 4,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/43f1dce5d6f44383a832f4135d0b7bf5_1024",
-      gif: "https://media.tenor.com/62FxhMXYG2cAAAAM/mario-luigi.gif",
-      title: "Mario & Luigi™: Brothership",
+      img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/ar_1.0,c_auto_pad,g_auto:thirds_0/f_auto/q_auto/dpr_1.5/c_scale,w_300/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Cases/nintendo-switch-travel-case-glow-mario-icon-120764/120764-pdp-nintendo-switch-travel-case-mario-icon-front-1200x675",
+      gif: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcSmgdzS0z4kUe5e-5sTpIKSCFQ8ifzEbM7A&s",
+      title: "REMATCH Wireless Controller Glow: Super Mario™ Icon",
       price: "$60.28",
     },
   ];
@@ -46,7 +45,7 @@ const StoreNewRelease = () => {
       <div className="px-5 md:px-10 lg:px-16 py-10">
         <div className="flex items-center gap-5 mb-8">
           <h1 className=" text-2xl font-semibold text-textColor">
-            New releases
+            Multiplayer Accessories
           </h1>
           <div className="h-5 w-0.5 bg-gray-300"></div>
           <p className="text-primary pb-0.5 font-semibold border-b-2 border-primary w-max my-auto">
@@ -62,7 +61,7 @@ const StoreNewRelease = () => {
                   className=" basis-1/1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4  px-4"
                 >
                   <div className="border rounded-xl border-zinc-300 group overflow-hidden cursor-pointer h-full">
-                    <div className="relative w-full h-[250px] overflow-hidden">
+                    <div className="relative w-full h-[250px] bg-white overflow-hidden">
                       <Image
                         src={item.img}
                         fill
@@ -72,7 +71,7 @@ const StoreNewRelease = () => {
                       <Image
                         src={item.gif}
                         fill
-                        className="object-cover rounded-t-xl opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+                        className="object-contain rounded-t-xl opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
                         alt="Hover animation"
                       />
                     </div>
@@ -111,4 +110,4 @@ const StoreNewRelease = () => {
   );
 };
 
-export default StoreNewRelease;
+export default MultiplayerAccessories;

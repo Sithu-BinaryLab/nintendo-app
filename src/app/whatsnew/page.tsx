@@ -90,14 +90,33 @@ function WhatsNewContent() {
 
 export default function WhatsNew() {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto mt-10">
-      <div className="flex space-x-2 items-center">
-        <MessageSquare className="h-10 w-10" />
-        <Header title="News & Events" className="" />
+    <>
+      <head>
+        <title>News & Events - YourSite</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest news and events."
+        />
+        <meta property="og:title" content="News & Events" />
+        <meta
+          property="og:description"
+          content="Latest updates and happenings."
+        />
+        <meta
+          property="og:image"
+          content="https://assets.nintendo.com/image/upload/v1643742733/ncom/global/social-share.jpg"
+        />
+        <meta property="og:url" content="https://www.nintendo.com/us/" />
+      </head>
+      <div className="min-h-screen max-w-7xl mx-auto mt-10">
+        <div className="flex space-x-2 items-center">
+          <MessageSquare className="h-10 w-10" />
+          <Header title="News & Events" className="" />
+        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <WhatsNewContent />
+        </Suspense>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <WhatsNewContent />
-      </Suspense>
-    </div>
+    </>
   );
 }
