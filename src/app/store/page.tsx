@@ -13,6 +13,8 @@ import {
   Gift,
   HelpCircle,
 } from "lucide-react";
+import BestSellers from "@/components/organisms/best-sellers";
+import Characters from "@/components/organisms/characters";
 
 export default function Home() {
   return (
@@ -33,7 +35,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Hero Section */}
       <section className="relative bg-red-600 text-white py-10">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -65,7 +66,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Categories Section */}
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
@@ -91,7 +91,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* New Promotional Section */}
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -152,7 +151,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/* News Release */}
+      <BestSellers />
+      <BestSellers />
+      <BestSellers />
       {/* Explore Collections Section */}
       <section className="bg-gray-200 py-6">
         <div className="max-w-7xl mx-auto px-4">
@@ -162,9 +164,9 @@ export default function Home() {
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
               {[
-                "Nintendo Switch systems",
+                "Nintendo Switch",
                 "Exclusives",
-                "Games under $20",
+                "Under $20",
                 "Top picks: Games",
                 "Retro collection",
                 "It's Peach time!",
@@ -185,7 +187,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Two Rewards */}
       <div className="grid grid-cols-2 gap-5 px-4 py-4">
         <div>
@@ -211,6 +212,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+      {/* Characters */}
+      <Characters />
       {/* Support Cards */}
       <div className="flex justify-around py-4 bg-white">
         <div className="flex flex-row items-center">
@@ -239,13 +242,6 @@ export default function Home() {
         </div>
       </div>
       {/* Logo */}
-      <div className="bg-red-600 py-4 flex justify-center px-4">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nintendo_red_logo.svg/1280px-Nintendo_red_logo.svg.png"
-          alt="Nintendo Logo"
-          className="h-6"
-        />
-      </div>
     </div>
   );
 }
