@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nintendo
 
-## Getting Started
+## Version
 
-First, run the development server:
+**Version:** 1.0.0
+
+## Description
+
+`Nintendo` is a Next.js-based web application (version 15.3.3) that follows the atomic design pattern for structuring UI components. It uses `Shadcn` for accessible and customizable UI components, `TailwindCSS` (version 4) for styling, and `Lucide Icons` for icons. The project includes Storybook for component development and testing, with biome for linting and formatting.
+
+---
+
+## Installation
+
+To install the dependencies and set up the project for development, ensure that you have [Node.js](https://nodejs.org/) installed. Since the project uses `pnpm`, if it is not installed globally, you can install it by running:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, install the project dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+To start the development server, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The server will start on http://localhost:3000 and watch for changes to automatically reload.
 
-## Deploy on Vercel
+## Production Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To create a production build, use:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm run build
+```
+
+## Starting the Production Server
+
+After building, you can start the production server using:
+
+```bash
+pnpm run start
+```
+
+## Linting
+
+To check and fix linting issues, run:
+
+```bash
+pnpm run lint
+```
+
+## Analyze Bundle Size
+
+```bash
+pnpm run analyze
+```
