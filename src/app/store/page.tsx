@@ -13,8 +13,8 @@ import {
   Gift,
   HelpCircle,
 } from "lucide-react";
-import BestSellers from "@/components/organisms/best-sellers";
-import Characters from "@/components/organisms/characters";
+import StoreNewRelease from "@/components/organisms/store-news";
+import ShopByCharacters from "@/components/organisms/shop-by-character";
 
 export default function Home() {
   return (
@@ -152,9 +152,9 @@ export default function Home() {
         </div>
       </section>
       {/* News Release */}
-      <BestSellers />
-      <BestSellers />
-      <BestSellers />
+      <StoreNewRelease />
+      <StoreNewRelease />
+      <StoreNewRelease />
       {/* Explore Collections Section */}
       <section className="bg-gray-200 py-6">
         <div className="max-w-7xl mx-auto px-4">
@@ -213,7 +213,7 @@ export default function Home() {
         </div>
       </div>
       {/* Characters */}
-      <Characters />
+      <ShopByCharacters />
       {/* Support Cards */}
       <div className="flex justify-around py-4 bg-white">
         <div className="flex flex-row items-center">

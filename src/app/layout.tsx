@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${beVietnam.className}  `}>
-        <div className="lg:max-w-[90rem] lg:mx-auto">
+        <div className="lg:max-w-[92rem] lg:mx-auto">
           <Navbar />
           {children}
           <Footer />
