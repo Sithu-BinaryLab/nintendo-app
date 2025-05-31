@@ -15,7 +15,6 @@ export default function ArticleCard({
   id,
   image,
   date,
-  category,
   title,
   description,
   bannerText,
