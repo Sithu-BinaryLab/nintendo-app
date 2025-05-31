@@ -1,4 +1,5 @@
 "use client";
+import SupportCards from "@/components/organisms/support-cards";
 import {
   Gamepad2,
   Truck,
@@ -233,15 +234,13 @@ export default function Games() {
         </div>
       </div>
       <div className="flex items-center space-x-2 text-gray-600 text-sm py-4 pl-4">
-        <Link href="/">Home</Link>
+        <Link href="#">Home</Link>
         <ChevronRight className="w-4 h-4 text-gray-400" />
-        <Link href="/my-nintendo-store">My Nintendo Store</Link>
+        <Link href="#">My Nintendo Store</Link>
         <ChevronRight className="w-4 h-4 text-gray-400" />
-        <Link href="/games">Games</Link>
+        <Link href="#">Games</Link>
         <ChevronRight className="w-4 h-4 text-gray-400" />
-        <Link href="/coming-to-nintendo-switch-2">
-          Coming to Nintendo Switch 2
-        </Link>
+        <Link href="#">Coming to Nintendo Switch 2</Link>
       </div>
 
       {/* Game Grid Section */}
@@ -250,7 +249,7 @@ export default function Games() {
         <div className="w-1/4 p-4 bg-gray-200 rounded-lg shadow-md">
           <div className="bg-white p-5 rounded-md">
             <div className="flex justify-center items-center mb-4">
-              <button className="text-blue-600 font-semibold flex items-center">
+              <button className="text-gray-200 font-semibold flex items-center">
                 <X className="w-4 h-4 mr-1" /> Clear all
               </button>
             </div>
@@ -261,9 +260,9 @@ export default function Games() {
               >
                 Deals
                 {filters.deals ? (
-                  <ChevronUp className="w-4 h-4" />
+                  <ChevronUp className="w-7 h-7" />
                 ) : (
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-7 h-7" />
                 )}
               </button>
               {filters.deals && (
@@ -279,9 +278,9 @@ export default function Games() {
               >
                 DLC
                 {filters.dlc ? (
-                  <ChevronUp className="w-4 h-4" />
+                  <ChevronUp className="w-7 h-7" />
                 ) : (
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-7 h-7" />
                 )}
               </button>
               {filters.dlc && (
@@ -301,7 +300,7 @@ export default function Games() {
               )}
             </div>
             <div className="border-b">
-              <button
+              {/* <button
                 onClick={() => toggleFilter("nso")}
                 className="flex justify-between items-center w-full text-left font-bold mb-2"
               >
@@ -311,7 +310,7 @@ export default function Games() {
                 ) : (
                   <ChevronDown className="w-4 h-4" />
                 )}
-              </button>
+              </button> */}
               {filters.nso && (
                 <div className="border-b">
                   <button
@@ -320,9 +319,9 @@ export default function Games() {
                   >
                     Platform
                     {filters.platform ? (
-                      <ChevronUp className="w-4 h-4" />
+                      <ChevronUp className="w-7 h-7" />
                     ) : (
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-7 h-7" />
                     )}
                   </button>
                   {filters.platform && (
@@ -336,35 +335,28 @@ export default function Games() {
             </div>
             <div className="border-b">
               <button
-                onClick={() => toggleFilter("platform")}
-                className="flex justify-between items-center w-full text-left font-bold mb-2"
-              >
-                Platform
-                {filters.platform ? (
-                  <ChevronUp className="w-4 h-4" />
-                ) : (
-                  <ChevronDown className="w-4 h-4" />
-                )}
-              </button>
-              {filters.platform && (
-                <label className="flex items-center mb-2">
-                  <input type="checkbox" className="mr-2 w-6 h-6" /> Nintendo
-                  Switch 2 (31)
-                </label>
-              )}
-            </div>
-            <div>
-              <button
                 onClick={() => toggleFilter("availability")}
                 className="flex justify-between items-center w-full text-left font-bold mb-2"
               >
                 Availability
                 {filters.availability ? (
-                  <ChevronUp className="w-4 h-4" />
+                  <ChevronUp className="w-7 h-7" />
                 ) : (
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-7 h-7" />
                 )}
               </button>
+              {filters.availability && (
+                <>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="mr-2 w-6 h-6" /> Coming
+                    soon 31
+                  </label>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="mr-2 w-6 h-6" />{" "}
+                    Pre-order30
+                  </label>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -377,7 +369,7 @@ export default function Games() {
             </h2>
             <div className="relative">
               <select
-                className="border rounded p-2 text-gray-700 bg-gray-200 appearance-none pr-8"
+                className="border rounded p-2 text-gray-700 bg-white appearance-none pr-8"
                 value={sortOption}
                 onChange={(e) => setSortOption(e.target.value)}
               >
@@ -462,6 +454,7 @@ export default function Games() {
           </div>
         </div>
       </div>
+      <SupportCards />
     </div>
   );
 }

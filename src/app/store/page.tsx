@@ -1,21 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Gamepad2,
-  Monitor,
-  Shirt,
-  Star,
-  User,
-  Tag,
-  Truck,
-  Receipt,
-  Gift,
-  HelpCircle,
-} from "lucide-react";
+import { Gamepad2, Monitor, Shirt, Star, User, Tag, Truck } from "lucide-react";
 import StoreNewRelease from "@/components/organisms/store-news";
 import ShopByCharacters from "@/components/organisms/shop-by-character";
 import DonkeyKongExclusive from "@/components/organisms/donkey-kong-exclusive";
 import MultiplayerAccessories from "@/components/organisms/multiplayer-accessories";
+import SupportCards from "@/components/organisms/support-cards";
 
 export default function Home() {
   return (
@@ -239,33 +229,7 @@ export default function Home() {
         {/* Characters */}
         <ShopByCharacters />
         {/* Support Cards */}
-        <div className="flex justify-around py-8 cursor-pointer bg-white">
-          <div className="border border-zin-300 rounded-xl p-4 flex flex-row items-center group">
-            <Receipt className="w-20 h-20 text-red-600" />
-            <span className="text-gray-700 group-hover:text-primary my-auto text-xl font-semibold text-gray-700 pl-2">
-              Order status
-            </span>
-          </div>
-          <div className="border border-zin-300 rounded-xl p-4 group flex flex-row items-center">
-            <Gift className="w-20 h-20 text-red-600" />
-            <span className="text-gray-700 group-hover:text-primary my-auto text-xl font-semibold text-gray-700 pl-2">
-              Redeem code
-            </span>
-          </div>
-          <div className="border border-zin-300 rounded-xl p-4 group flex flex-row items-center">
-            <Star className="w-20 h-20 text-red-600" />
-            <span className="text-gray-700 group-hover:text-primary my-auto text-xl font-semibold text-gray-700 pl-2">
-              Top picks for you
-            </span>
-          </div>
-          <div className="border border-zin-300 rounded-xl p-4 group flex flex-row items-center">
-            <HelpCircle className="w-20 h-20 text-red-600" />
-            <span className="text-gray-700 group-hover:text-primary my-auto text-xl font-semibold text-gray-700 pl-2">
-              Store support
-            </span>
-          </div>
-        </div>
-        {/* Logo */}
+        <SupportCards />
       </div>
     </>
   );

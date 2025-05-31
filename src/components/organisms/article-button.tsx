@@ -1,4 +1,3 @@
-// components/AnimatedButton.tsx
 import { MouseEventHandler } from "react";
 import Link from "next/link";
 
