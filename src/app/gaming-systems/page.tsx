@@ -65,7 +65,7 @@ export default function Home() {
         <div className="px-4 md:px-8 gap-y-4 gap-x-4 items-center w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto">
           <div className="flex flex-col gap-y-6 items-center justify-center text-center md:text-left">
             <span className="font-black text-3xl md:text-5xl px-4 md:px-8">
-              <strong>See what's new with</strong>
+              <strong>See what&apos;s new with</strong>
             </span>
             <span className="font-black text-4xl md:text-7xl">
               Nintendo Switch 2
@@ -184,14 +184,15 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 text-gray-700 items-center justify-center">
           <div className="flex flex-col gap-y-8">
             <h2 className="font-bold text-5xl md:text-8xl">
-              Say "hello" to GameChat
+              Say &quot;hello&quot; to GameChat
             </h2>
             <p className="font-semibold text-base md:text-xl">
               Start a chat with friends at any time using the C Button!
             </p>
+            Collapse Wrap Copy
             <p className="font-semibold text-base md:text-xl">
-              Share your game screen while chatting to show what you're up to.
-              And for a more personal touch, connect face-to-face with the
+              Share your game screen while chatting to show what you&apos;re up
+              to. And for a more personal touch, connect face-to-face with the
               Nintendo Switch 2 camera or other compatible USB-C® camera (each
               sold separately).
             </p>

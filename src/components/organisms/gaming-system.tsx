@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { Button } from "../atoms/button";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const GamingSystem = () => {
+  const router = useRouter();
   return (
     <div className="">
       <div className="px-5 md:px-10 lg:px-16 ">
@@ -26,6 +29,11 @@ const GamingSystem = () => {
           <Button
             size="lg"
             className="cursor-pointer !h-12 !text-lg transition-transform duration-200 hover:scale-105"
+            onClick={() =>
+              router.push(
+                "https://www.nintendo.com/us/gaming-systems/switch-2/features/"
+              )
+            }
           >
             Learn more
           </Button>
