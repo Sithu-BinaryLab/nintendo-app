@@ -6,8 +6,7 @@
 
 ## Description
 
-`Nintendo` is a Next.js-based web application (version 15.3.3) that follows the atomic design pattern for structuring UI components. It uses `Shadcn` for accessible and customizable UI components, `TailwindCSS` (version 4) for styling, and `Lucide Icons` for icons. The project includes Storybook for component development and testing, with biome for linting and formatting.
-
+`Nintendo` is a Next.js-based web application (version 15.3.3) that follows the atomic design pattern for structuring UI components. It uses `Shadcn` for accessible and customizable UI components, `TailwindCSS` (version 4) for styling, and `Lucide Icons` for icons.
 ---
 
 ## Installation
