@@ -1,4 +1,3 @@
-import Link from "next/link";
 import AnimatedButton from "./article-button";
 
 interface GameCardProps {

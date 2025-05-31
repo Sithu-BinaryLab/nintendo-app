@@ -9,36 +9,35 @@ import {
 import Image from "next/image";
 import { Badge } from "../atoms/badge";
 import { AtomIcon, HeartIcon } from "lucide-react";
-import Link from "next/link";
 
-const BestSellers = () => {
+const StoreNewRelease = () => {
   const data = [
     {
       id: 1,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/6d1be00348d241d59c6b3dcdcb818c78_1024",
-      gif: "https://c.tenor.com/eipDwdjHvIMAAAAd/tenor.gif",
-      title: "FANTASY LIFE i: The Girl Who Steals Time",
+      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/9283ed4325ac4ac5be6648f0945efb6d_1024",
+      gif: "https://media.tenor.com/bWL6DG8SSvYAAAAM/malos-monday.gif",
+      title: "Xenoblade Chronicles",
       price: "$59.99",
     },
     {
       id: 2,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/235aa9237a344669acb379e446366230_1024",
-      gif: "https://media.tenor.com/sF_IlkYCPAcAAAAM/regal%27s-models-minecraft-cpm.gif",
-      title: "Minecraft",
+      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/60f29fafdcfe4b42ac2b74dd930fd620_1024",
+      gif: "https://media.tenor.com/PxwLHiupI2oAAAAM/super-smash-bros-brawl-super-smash-bros.gif",
+      title: "Donkey Kong",
       price: "$29.99",
     },
     {
       id: 3,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/1090fdd9c2684dd195c364a83ae45361_1024",
-      gif: "https://media.tenor.com/InkHc9YhvWkAAAAM/doom-doom-slayer.gif",
-      title: "DOOM",
+      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/38a6ead82da44173a9e1e9aaab3b467b_1024",
+      gif: "https://media.tenor.com/uSRRixIs3scAAAAM/boxing-sheamus.gif",
+      title: "Fitness Boxing",
       price: "$59.99",
     },
     {
       id: 4,
-      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/58ef49c8ac0847eda11e41dee3d3f2f1_1024",
-      gif: "https://media.tenor.com/-gh8QqcNQT8AAAAM/ea-sports-fifa-trailer-active-touch.gif",
-      title: "EA Sports FAM25",
+      img: "https://assets.nintendo.com/image/fetch/q_auto/f_auto/https://atum-img-lp1.cdn.nintendo.net/i/c/43f1dce5d6f44383a832f4135d0b7bf5_1024",
+      gif: "https://media.tenor.com/62FxhMXYG2cAAAAM/mario-luigi.gif",
+      title: "Mario & Luigi™: Brothership",
       price: "$60.28",
     },
   ];
@@ -47,15 +46,12 @@ const BestSellers = () => {
       <div className="px-5 md:px-10 lg:px-16 py-10">
         <div className="flex items-center gap-5 mb-8">
           <h1 className=" text-2xl font-semibold text-textColor">
-            Digital best sellers
+            New releases
           </h1>
           <div className="h-5 w-0.5 bg-gray-300"></div>
-          <Link
-            href={"https://www.nintendo.com/us/store/games/best-sellers/"}
-            className="text-primary pb-0.5 font-semibold border-b-2 border-primary w-max"
-          >
+          <p className="text-primary pb-0.5 font-semibold border-b-2 border-primary w-max my-auto">
             see full list
-          </Link>
+          </p>
         </div>
         <Carousel>
           <CarouselContent className="px-10">
@@ -65,12 +61,7 @@ const BestSellers = () => {
                   key={index}
                   className=" basis-1/1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4  px-4"
                 >
-                  <Link
-                    href={
-                      "https://www.nintendo.com/us/store/products/fantasy-life-i-the-girl-who-steals-time-switch/"
-                    }
-                    className="border rounded-xl border-zinc-300 group overflow-hidden cursor-pointer h-full"
-                  >
+                  <div className="border rounded-xl border-zinc-300 group overflow-hidden cursor-pointer h-full">
                     <div className="relative w-full h-[250px] overflow-hidden">
                       <Image
                         src={item.img}
@@ -107,7 +98,7 @@ const BestSellers = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </CarouselItem>
               );
             })}
@@ -120,4 +111,4 @@ const BestSellers = () => {
   );
 };
 
-export default BestSellers;
+export default StoreNewRelease;
